@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="солянка">
+
+<div ng-controller="StudentsListCtrl">
+  <ul>
+    <li ng-repeat="student in students">
+      {{ student.name }} <button ng-click="dropStudent($index)">отчислить</button>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
