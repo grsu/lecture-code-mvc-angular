@@ -3,6 +3,11 @@
 <head>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
+  <style>
+    .removed span {
+      text-decoration: line-through;
+    }
+  </style>
 </head>
 <body ng-app="для-старосты">
 
@@ -13,9 +18,7 @@
     </label>
   </form>
 
-  <ul>
-    <li ng-repeat="student in students">{{ student.name }}</li>
-  </ul>
+  <students-list data="students" title="ПОИТ, 2014"></students-list>
 </div>
 
 </body>

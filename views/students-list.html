@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+<ul>
+  <li ng-repeat="student in data">
+      <span ng-show="student.active">
+        {{ student.name }}
+
+        <a href="#" ng-click="markAbsence(student)">Отметить остутствие</a>
+        <a href="#" ng-click="reportStudent(student)">Сдать в деканат</a>
+      </span>
+
+      <span ng-show="student.removed" class="removed">
+        <span>{{ student.name }}</span> ({{ student.reasonForRemoval }})
+      </span>
+  </li>
+</ul>
